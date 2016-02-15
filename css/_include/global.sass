@@ -1,0 +1,66 @@
+@import "fonts"
+@import "mixins"
+@import "reset"
+$brandon:'brandon', sans-serif
+$headings:'Montserrat', sans-serif
+$open-sans:'Open Sans', sans-serif
+$color2: #2DB67C
+$white:#fff
+
+:root
+  font-size: 16px
+
+::-moz-selection
+    background: rgba(255, 235, 0, 0.51)
+::selection
+    background: rgba(255, 235, 0, 0.51)
+
+body
+  font-family:$open-sans
+
+input,select
+  margin-left: -5px
+  padding: 0
+
+h1,h2,h3,h4,h5,h6
+  font-family: $headings
+h1
+  font-size: 2.5rem
+h2
+  font-size: 1.9rem
+p
+  line-height: 1.5rem
+
+a
+  text-decoration: none
+  color: inherit
+.uc
+  text-transform: uppercase
+.center
+  text-align: center
+.hide
+  display: none
+.fl
+  float: left
+.fr
+  float: right
+
+a.button-border
+  display:inline-block
+  border:2px solid
+  padding: 3px 15px
+  @include transition(all .5s)
+  @include border-radius(5px)
+  &:hover
+    border:2px solid $color2
+.center-me
+  position: absolute
+  top: 50%
+  left: 50%
+  @include transform(translate(-50%,-50%))
+
+a.button-full
+  padding: 18px 60px
+  background: $color2
+  color: $white
+  @include border-radius(3px)
