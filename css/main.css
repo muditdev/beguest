@@ -660,7 +660,7 @@ a.button-border:hover {
   border: 2px solid #2DB67C;
 }
 
-.center-me, section.video-section .overlay-content {
+.center-me, .mobo-nav nav, section.video-section .overlay-content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -682,6 +682,112 @@ a.button-full {
   border-radius: 3px;
 }
 
+.fixme {
+  position: fixed !important;
+  right: 30px;
+}
+
+.mobile-nav-ico {
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  z-index: 9999;
+}
+
+.nav-trigger {
+  width: 50px;
+  height: 45px;
+  position: relative;
+  margin: 20px auto;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+.nav-trigger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.nav-trigger span:nth-child(1) {
+  top: 0;
+}
+
+.nav-trigger span:nth-child(2) {
+  top: 16px;
+}
+
+.nav-trigger span:nth-child(3) {
+  top: 32px;
+}
+
+.nav-trigger.open span:nth-child(1) {
+  transform: rotate(135deg);
+  top: 16px;
+}
+
+.nav-trigger.open span:nth-child(3) {
+  transform: rotate(-135deg);
+  top: 16px;
+}
+
+.nav-trigger.open span:nth-child(2) {
+  transform: scale(0.4);
+  left: -60px;
+  opacity: .3;
+}
+
+.mobo-nav {
+  background: rgba(45, 182, 124, 0.97);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  opacity: 0;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  visibility: hidden;
+}
+
+.mobo-nav.show-me {
+  opacity: 1;
+  visibility: inherit;
+}
+
+.mobo-nav ul li {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.mobo-nav ul li a {
+  color: #fff;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.mobo-nav ul li .button-border {
+  padding: 30px;
+}
+
 header.main-header {
   background: url(../media/images/banner.jpg) no-repeat center;
   overflow: hidden;
@@ -694,6 +800,11 @@ header.main-header .header-top {
   max-width: 1600px;
   margin: 0 auto;
   padding: 25px 35px;
+}
+
+header.main-header .branding {
+  position: relative;
+  z-index: 9999;
 }
 
 header.main-header nav.main-navigation ul li {
@@ -731,7 +842,8 @@ header.main-header nav.main-navigation ul li a {
 
 .search-panel form.search ul {
   background: #fff;
-  width: 664px;
+  width: 680px;
+  height: 50px;
   overflow: hidden;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -746,7 +858,8 @@ header.main-header nav.main-navigation ul li a {
 }
 
 .search-panel form.search li {
-  display: inline-block;
+  display: block;
+  float: left;
   margin: 0;
 }
 
@@ -764,15 +877,26 @@ header.main-header nav.main-navigation ul li a {
   outline: none;
 }
 
+.search-panel form.search li.submit {
+  position: absolute;
+  right: 0;
+}
+
 .search-panel form.search input[type="submit"] {
+  right: 0;
   border: none;
   background: #2DB67C;
   color: #fff;
-  padding: 0 25px;
+  padding: 0 35px;
   cursor: pointer;
   font-weight: 600;
   position: relative;
   left: 2px;
+  -webkit-border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  -o-border-radius: 0 5px 5px 0;
+  -ms-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
 }
 
 .myselect {
@@ -799,10 +923,22 @@ header.main-header nav.main-navigation ul li a {
 }
 
 .select-footer select {
+  margin: 5px;
   padding: 14px 16px;
   font-family: "Open Sans", sans-serif;
   color: #55595B;
   margin-left: 20px;
+  background: #fff;
+  border: 1px solid rgba(85, 89, 91, 0.64);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.select-footer select:focus {
+  outline: none;
 }
 
 .select-footer select option {
@@ -1101,7 +1237,106 @@ footer.main-footer .social-media a:hover {
 
 /*importing responsive*/
 @media only screen and (min-width: 317px) and (max-width: 479px) {
-  .box {
-    background: red;
+  body {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 1.2rem !important;
+  }
+  h3 {
+    font-size: 1.1rem !important;
+  }
+  .mobile-nav-ico {
+    display: inherit;
+  }
+  nav.main-navigation {
+    display: none;
+  }
+  .mobo-nav ul li {
+    margin-top: 20px;
+  }
+  .mobo-nav ul li a {
+    font-size: 1rem;
+  }
+  .mobo-nav ul li .button-border {
+    padding: 20px;
+  }
+  .search-panel h1 {
+    font-size: 1rem !important;
+  }
+  .search-panel form.search {
+    -webkit-transform: scale(0.4);
+    -moz-transform: scale(0.4);
+    -o-transform: scale(0.4);
+    -ms-transform: scale(0.4);
+    transform: scale(0.4);
+  }
+  /*need more work here*/
+  section.video-section .overlay-content h1 {
+    font-size: 1.2rem !important;
+    line-height: 1.7rem;
+  }
+  section.guestimonial h1 {
+    font-size: 1.2rem !important;
+  }
+  section.guestimonial p.message {
+    font-size: 1rem;
+  }
+  .main-footer {
+    text-align: center;
+  }
+  .main-footer .col {
+    margin-top: 20px;
+  }
+  .main-footer .col a.button-full {
+    position: relative;
+    top: 25px;
+  }
+  .main-footer .select-footer select {
+    position: relative;
+    left: -19px;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .container {
+    padding-left: 10px !important;
+  }
+  .mobile-nav-ico {
+    display: inherit;
+  }
+  nav.main-navigation {
+    display: none;
+  }
+  .search-panel h1 {
+    font-size: 1.5rem !important;
+  }
+  .search-panel form.search {
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -o-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+  .event {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  .main-footer {
+    text-align: center;
+  }
+  .main-footer .col {
+    margin-top: 20px;
+  }
+  .main-footer .col a.button-full {
+    position: relative;
+    top: 25px;
+  }
+  .main-footer .select-footer select {
+    position: relative;
+    left: -19px;
   }
 }
