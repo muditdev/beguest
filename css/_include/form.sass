@@ -1,0 +1,123 @@
+.search-panel
+  form.search
+    margin-top: 33px
+    ul
+      background: #fff
+      width: 680px
+      height: 50px
+      overflow: hidden
+      @include border-radius(5px)
+      @include box-shadow(0 0 20px 0 rgba(0, 0, 0, 0.43))
+    li
+      display: block
+      float: left
+      margin: 0
+    input,select
+      border: none
+      height: 50px
+      padding-left: 15px
+      padding-right: 15px
+      font-family: $open-sans
+      font-size: 16px
+      border-left: 1px solid #DDDDDD
+      &:focus
+        outline: none
+
+    li.submit
+      position: absolute
+      right: 0
+
+    input[type="submit"]
+      right: 0
+      border: none
+      background: #2DB67C
+      color: #fff
+      padding: 0 35px
+      cursor: pointer
+      font-weight: 600
+      position: relative
+      left: 2px
+      @include border-radius(0 5px 5px 0)
+.myselect
+  width: 140px
+  background-color: #fff
+  background: #fff url("../media/images/arrow.png") no-repeat 90% 50%
+  select
+    color: #565A5C
+    padding: 5px 8px
+    width: 130%
+    border: none
+    box-shadow: none
+    background-color: transparent
+    background-image: none
+    -webkit-appearance: none
+       -moz-appearance: none
+            appearance: none
+
+
+
+
+.search-panel
+  form.mobo-search
+    display: none
+    ul
+      margin-top: 20px
+      text-align: center
+      position: relative
+      li
+      input,select
+        width: 200px
+        border: none
+        height: 50px
+        padding-left: 15px
+        padding-right: 15px
+        font-family: $open-sans
+        font-size: 16px
+        @include border-radius(5px)
+      input
+        margin-top: 10px
+        &:focus
+          outline: none
+      input[type="submit"]
+        border: none
+        background: #2DB67C
+        color: #fff
+        padding: 0 35px
+        cursor: pointer
+        font-weight: 600
+        width: 230px
+        @include border-radius(5px)
+        position: relative
+        left: 3px
+
+      .myselect
+        margin-top: 10px
+        width:230px
+        @include border-radius(5px)
+
+        select
+          padding: 0 20px
+
+
+
+
+
+
+
+.footer-bottom
+  margin: 60px 0
+.select-footer
+  select
+    margin: 5px
+    padding: 14px 16px
+    font-family: $open-sans
+    color: #55595B
+    margin-left:20px
+    background: #fff
+    border: 1px solid rgba(85, 89, 91, 0.64)
+    @include border-radius(2px)
+    &:focus
+      outline: none
+    option
+      font-size: 14px
+      font-weight: 100

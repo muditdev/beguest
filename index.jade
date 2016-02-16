@@ -1,0 +1,54 @@
+doctype html
+html(lang="en")
+  head
+    include _include/head
+  body
+    .mobo-nav
+      nav
+        ul.clearfix
+          li: a(href="#") Explore
+          li: a(href="#") How it Works
+          li: a(href="#") Sign Up
+          li: a(href="#") Login
+          li: a(href="#").button-border Become a Host
+          
+    header.main-header
+      .header-top.clearfix
+        .branding.fl
+          a(href="#") 
+            img(src="media/images/logo.png", alt="BeGuest-Logo")
+        nav.main-navigation.fr
+          ul
+            li: a(href="#") Explore
+            li: a(href="#") How it Works
+            li: a(href="#") Sign Up
+            li: a(href="#") Login
+            li: a(href="#").button-border Become a Host
+        .mobile-nav-ico.hide
+          .nav-trigger
+            span
+            span 
+            span 
+        
+      .search-panel
+        h1 Open up a world of real moments
+        include _include/form-banner
+    //header-closed
+    
+    
+    
+    include _include/up-event
+    
+    include _include/cat-event
+    
+    include _include/video-section
+    
+    include _include/testimonial
+        
+          
+    include _include/foot
+    
+    
+     
+    
+    
