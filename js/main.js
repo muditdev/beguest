@@ -1,3 +1,5 @@
+new WOW().init();
+
 /* anchor smooth scroll page */
 
 /****
