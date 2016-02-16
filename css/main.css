@@ -3834,6 +3834,16 @@ a.button-full {
   padding: 30px;
 }
 
+.mobo-nav .social-media {
+  width: 200px;
+  text-align: center;
+  margin: 35px auto;
+}
+
+.mobo-nav .social-media .fa {
+  border: 3px solid;
+}
+
 header.main-header {
   background: url(../media/images/banner.jpg) no-repeat center;
   overflow: hidden;
@@ -4317,7 +4327,7 @@ footer.main-footer ul li:hover {
   color: #2DB67C;
 }
 
-footer.main-footer .social-media a {
+.social-media a {
   display: inline-block;
   text-align: center;
   margin-left: 5px;
@@ -4327,13 +4337,13 @@ footer.main-footer .social-media a {
   transition: all 300ms;
 }
 
-footer.main-footer .social-media a i {
+.social-media a i {
   line-height: 37px;
   font-size: 1.2rem;
   color: #fff;
 }
 
-footer.main-footer .social-media a .fa {
+.social-media a .fa {
   background: #565A5C;
   width: 37px;
   height: 37px;
@@ -4344,31 +4354,31 @@ footer.main-footer .social-media a .fa {
   border-radius: 50%;
 }
 
-footer.main-footer .social-media a .fa-facebook:hover {
+.social-media a .fa-facebook:hover {
   background: #3b5998;
 }
 
-footer.main-footer .social-media a .fa-twitter:hover {
+.social-media a .fa-twitter:hover {
   background: #55acee;
 }
 
-footer.main-footer .social-media a .fa-google-plus:hover {
+.social-media a .fa-google-plus:hover {
   background: #dd4b39;
 }
 
-footer.main-footer .social-media a .fa-linkedin:hover {
+.social-media a .fa-linkedin:hover {
   background: #007bb5;
 }
 
-footer.main-footer .social-media a .fa-pinterest-p:hover {
+.social-media a .fa-pinterest-p:hover {
   background: #cb2027;
 }
 
-footer.main-footer .social-media a .fa-youtube-play:hover {
+.social-media a .fa-youtube-play:hover {
   background: #bb0000;
 }
 
-footer.main-footer .social-media a .fa-instagram:hover {
+.social-media a .fa-instagram:hover {
   background: #125688;
 }
 
