@@ -230,10 +230,6 @@ footer.main-footer
   .social-media
     a
       display: inline-block
-      width: 37px
-      height: 37px
-      background: #565A5C
-      @include border-radius(50%)
       text-align: center
       margin-left: 5px
       @include transition(all 300ms)
@@ -241,7 +237,28 @@ footer.main-footer
         line-height: 37px
         font-size: 1.2rem
         color: #fff
-      &:hover
-        background: $color2
+      .fa
+        background: #565A5C
+        width: 37px
+        height: 37px
+        @include border-radius(50%)
+      .fa-facebook:hover
+          background: #3b5998
+      .fa-twitter:hover
+          background: #55acee
+      .fa-google-plus:hover
+          background: #dd4b39
+      .fa-linkedin:hover
+          background: #007bb5
+      .fa-pinterest-p:hover
+          background: #cb2027
+      .fa-youtube-play:hover
+          background: #bb0000
+      .fa-instagram:hover
+          background: #125688
+
+
+
+
 /*importing responsive*/
 @import "_include/responsive"
